@@ -21,6 +21,7 @@ tf-apply:
 	terraform apply $(PLAN)
 
 destroy: ## DANGER!!!! THIS DESTROYS THE WHOLE BOSH STACK!!!! BE SURE WHAT YOU ARE DOING!!!!!
+	    bosh delete deployment concourse
 	    bosh-init delete bosh-director.yml
 		terraform destroy -var-file=$(TF_VARS) $(RESOURCES)/
 

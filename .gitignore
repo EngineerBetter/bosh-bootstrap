@@ -14,3 +14,5 @@
 bosh-director.yml
 concourse.yml
 aws-cloud.yml
+vars/cloud_vars_secrets.yml
+vars/concourse_vars_secrets.yml
